@@ -1,0 +1,30 @@
+<h3>Technologies Information</h3>
+<div>
+    <div class="mb-3">
+        <label> <b>Frontend Technologies:</b></label><br>
+        <div *ngFor = "let item of frontend">
+           <p class="itemsInfo">{{item}}</p>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label> <b>Backend Technologies:</b></label><br>
+        <div *ngFor = "let item of backend">
+            <p class="itemsInfo">{{item}}</p>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label> <b>Database:</b></label><br>
+           <p class="itemsInfo">{{database}}</p>
+    </div>
+    <div class="mb-3">
+        <label> <b>Web Services:</b></label><br>
+        <div *ngFor = "let item of webServices">
+            <p class="itemsInfo">{{item}}</p>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label> <b>GitHub:</b></label><br>
+           <p class="itemsInfo">{{gitHub}}</p>
+    </div>
+    
+</div>

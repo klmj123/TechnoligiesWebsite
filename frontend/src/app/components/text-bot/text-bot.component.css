@@ -1,0 +1,16 @@
+.askSomething{
+    width: 75%;
+}
+
+.askSomethingButton{
+    width: 7%;
+    position: absolute;
+}
+
+.conversation{
+    resize: none;
+}
+
+.selectPersonality{
+    width: 30%;
+}

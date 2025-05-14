@@ -1,0 +1,40 @@
+<h3 class="bookTitleDetails">{{book.volumeInfo?.title}}</h3>
+<div *ngIf = "book">
+    <div>
+        <div *ngIf="book.volumeInfo?.imageLinks?.thumbnail; else defaultIMG" class ="imageDetails">
+            <img [src]="book.volumeInfo?.imageLinks?.thumbnail"
+             alt="No Image" width="200" height="250">
+        </div>
+        <ng-template #defaultIMG>
+            <div class="imageDetails">
+                <img src="https://books.google.com/googlebooks/images/no_cover_thumb.gif" alt="No Image" width="200" height="250">
+            </div>
+        </ng-template>
+    </div>
+    <div class="bookDetails">
+        <div>
+            <label> <b>Book Id:</b></label> {{book.id}}
+        </div>
+        <div>
+            <label> <b>Authors:</b></label> {{book.volumeInfo?.authors}}
+        </div>
+        <div>
+            <label> <b>Publisher:</b></label> {{book.volumeInfo?.publisher}}
+        </div>
+        <div>
+            <label> <b>Description:</b></label> <p [innerHTML]="book.volumeInfo?.description"></p>
+        </div>
+        <div>
+            <label> <b>Average Raiting:</b></label> {{book.volumeInfo?.averageRating || 'N/A'}}
+        </div>
+        <div>
+            <label> <b>Raiting Count:</b></label> {{book.volumeInfo?.ratingsCount || 'N/A'}}
+        </div>
+        <div>
+            <label> <b>Page Count:</b></label> {{book.volumeInfo?.pageCount || 'N/A'}}
+        </div>
+        <div>
+            <label> <b>Book Preview:</b></label> <a [href]="book.volumeInfo?.previewLink"> {{book.volumeInfo?.previewLink}}</a>
+        </div>
+    </div>
+</div>

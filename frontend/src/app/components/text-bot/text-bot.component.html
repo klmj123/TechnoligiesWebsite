@@ -1,0 +1,11 @@
+<div>
+    <label class="selectPersonalityLabel" for="personality"><b>Select a personality for the bot:</b></label><br>
+    <select class="selectPersonality" name="personality" [(ngModel)]="selectedPersonality">
+        <option *ngFor="let personality of personalities" value="{{personality.id}}">{{personality.personality}}</option>
+    </select>
+    <button class="btn btn-danger ms-3 newConversation" (click) = "startNewConversation()">New Conversation</button><br>
+
+    <textarea disabled class="mt-3 conversation" rows="25" cols="125"  type="text" [(ngModel)] ="conversation"></textarea>
+    <input class="askSomething mt-2" [(ngModel)]="message" type="text" (click)="setTypingToTrue()" (keydown.enter)="getMessage()">
+    <button class="btn btn-info mt-1 ms-2 askSomethingButton" (click)="getMessage()">Enter</button>
+</div>
