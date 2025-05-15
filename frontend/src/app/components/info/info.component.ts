@@ -14,7 +14,7 @@ export class InfoComponent {
   backend: string[] = ["Java 17", "Maven", "SpringBoot", "Spring Data JPA", "Spring MVC", "Hibernate"];
   database: string= "PostgreSQL 16";
   webServices: string[] = ["AWS EC2", "AWS RDS", "AWS S3"];
-  gitHub: string = "something goes here"
+  gitHub: string = "https://github.com/klmj123/TechnoligiesWebsite.git"
 
 
 }
