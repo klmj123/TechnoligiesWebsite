@@ -9,7 +9,7 @@ Technologies:
   -Backend: Java 17, Maven, SpringBoot, Spring Data JPA, Spring MVC, Hibernate
   -Database: PostgreSQL 16
   -Web Services: AWS EC2, AWS RDS, AWS S3
-
+  -
 APIs:
   - Pokemon
   - Spotify
